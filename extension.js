@@ -17,14 +17,15 @@ function activate(context) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('extension.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World!');
+	let disposable1 = vscode.commands.registerCommand('extension.option1', function () {
+		vscode.window.showInformationMessage('Option 1 was chosen!');
 	});
 
-	context.subscriptions.push(disposable);
+	let disposable2 = vscode.commands.registerCommand('extension.option2', function () {
+		vscode.window.showInformationMessage('Option 2 was chosen!');
+	});
+
+	context.subscriptions.push(disposable1, disposable2);
 }
 exports.activate = activate;
 

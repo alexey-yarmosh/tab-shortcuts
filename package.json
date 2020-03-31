@@ -10,14 +10,27 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.helloWorld"
+		"onCommand:extension.option1",
+		"onCommand:extension.option2"
 	],
 	"main": "./extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
+				"command": "extension.option1",
+				"title": "Option 1"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.option1",
+				"key": "ctrl+1",
+				"mac": "ctrl+1"
+			},
+			{
+				"command": "extension.option2",
+				"key": "ctrl+2",
+				"mac": "ctrl+2"
 			}
 		]
 	},
