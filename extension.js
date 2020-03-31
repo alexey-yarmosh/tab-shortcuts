@@ -17,12 +17,17 @@ function activate(context) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with  registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable1 = vscode.commands.registerCommand('extension.option1', function () {
-		vscode.window.showInformationMessage('Option 1 was chosen!');
+	let disposable1 = vscode.commands.registerCommand('extension.chooseSecondOption', function () {
+		vscode.window.showInformationMessage('2nd option was chosen!');
+		vscode.commands.executeCommand('acceptSelectedSuggestion');
+		vscode.commands.executeCommand('insertNextSuggestion');
 	});
 
-	let disposable2 = vscode.commands.registerCommand('extension.option2', function () {
-		vscode.window.showInformationMessage('Option 2 was chosen!');
+	let disposable2 = vscode.commands.registerCommand('extension.chooseThirdOption', function () {
+		vscode.window.showInformationMessage('3rd option was chosen!');
+		vscode.commands.executeCommand('acceptSelectedSuggestion');
+		vscode.commands.executeCommand('insertNextSuggestion');
+		vscode.commands.executeCommand('insertNextSuggestion');
 	});
 
 	context.subscriptions.push(disposable1, disposable2);

@@ -10,27 +10,21 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.option1",
-		"onCommand:extension.option2"
+		"onCommand:extension.chooseSecondOption",
+		"onCommand:extension.chooseThirdOption"
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.option1",
-				"title": "Option 1"
-			}
-		],
 		"keybindings": [
 			{
-				"command": "extension.option1",
-				"key": "ctrl+1",
-				"mac": "ctrl+1"
-			},
-			{
-				"command": "extension.option2",
+				"command": "extension.chooseSecondOption",
 				"key": "ctrl+2",
 				"mac": "ctrl+2"
+			},
+			{
+				"command": "extension.chooseThirdOption",
+				"key": "ctrl+3",
+				"mac": "ctrl+3"
 			}
 		]
 	},
